@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 import time
+import subprocess
+import platform
 
 class Network (models.Model):
     ip_adr = models.GenericIPAddressField(protocol='IPv4', verbose_name="Adresse IP")
@@ -11,10 +13,7 @@ class Network (models.Model):
     class Meta:
         verbose_name_plural = "Les serveurs"     
 
-
-
-import subprocess
-import platform
+        
 def check_ping(current_ip_address):
         try:
             output = subprocess.check_output("ping -{} 1 {}".format('n' if platform.system().lower(
@@ -47,7 +46,6 @@ class Status(models.Model):
         S.save()
         return [pingstatus, timezone.now()]
         
-
     # Send Mail     
     def notify_u(ip_adresse, date_execution):
         from django.core.mail import send_mail
