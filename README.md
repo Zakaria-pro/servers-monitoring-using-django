@@ -1,4 +1,4 @@
-# The project
+# Description
 It's a a website where we can take a look at the state of our company's servers in real-time, but it needed the part front end with ReactJS so that the page is refreshed automatically with the change of data.
 
 # Main feautures
@@ -21,6 +21,7 @@ It's a a website where we can take a look at the state of our company's servers 
 ![image](https://lh5.googleusercontent.com/QDid4v085aJO9FzgLdAXgLMbkGI2jcFx7f0jA42JnuUKlZLLGn8E9X_WFTj2EGm5mMwfwwxDKjyLpEiB7wicAta1Z5qBpXh3ZecPxVfv=s745)
 ## The Dashboard 
 I am working on the dashboard to look great.
+
 # I want to contribute to this projet
 this project needed the part front end with react JS so that the dashboard is refreshed automaticaly when data is changed.
 
