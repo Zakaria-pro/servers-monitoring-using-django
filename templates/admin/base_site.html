@@ -1,0 +1,253 @@
+{% extends "admin/base.html" %}
+{% load static %} 
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+
+
+
+  
+
+
+
+
+{% block extrastyle %}<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+
+
+
+
+.submit-row a.deletelink {
+    display: block;
+    background: #e82b2b;
+    border-radius: 4px;
+    padding: 10px 15px;
+    height: unset;
+    line-height: 15px;
+    color: #fff;
+}
+
+.submit-row a.deletelink:focus, .submit-row a.deletelink:hover, .submit-row a.deletelink:active {
+    background: #8e44ad;
+}
+
+.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
+    stroke: #007bff;
+}
+
+.toggle-nav-sidebar {
+    z-index: 20;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 23px;
+    width: 23px;
+    border-right: 1px solid #eaeaea;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+    color: #007bff;
+    padding: 0;
+}
+
+/* DELETE BUTTON */
+
+
+/* Save and add another */
+.button:active, input[type=submit]:active, input[type=button]:active, .button:focus, input[type=submit]:focus, input[type=button]:focus, .button:hover, input[type=submit]:hover, input[type=button]:hover {
+    background: #007bff;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: rgb(0 123 255 / 71%);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* SAVE  */
+.button.default, input[type=submit].default, .submit-row input.default {
+    float: right;
+    border: none;
+    font-weight: 400;
+    background: #007bff;
+}
+
+/* Dek alkhtiyaat li ta7t dashborad */
+#user-tools a {
+    border-bottom: 1px solid #ffc;
+}
+
+.submit-row {
+    padding: 12px 14px;
+    margin: 0 0 20px;
+    background: #007bff2e;
+    border: 1px solid rgb(9, 103, 190);
+    border-radius: 4px;
+    text-align: right;
+    overflow: hidden;
+}
+
+
+
+/* Douk n9itat li d Recent Actions */
+ul > li {
+    list-style-type: disc;
+    padding: 3px 0;
+}
+
+/* F 9alb l groupe w user */
+
+
+.selector-available h2, .selector-chosen h2 {
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+}
+
+#content-related .actionlist {
+    padding: 0;
+    margin: 30px;
+}
+
+.delete-confirmation form .cancel-link {
+    display: unset;
+    vertical-align: middle;
+    height: 15px;
+    line-height: 15px;
+    background: #ddd;
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: #333;
+    margin: 0 0 0 10px;
+}
+
+#user-tools {
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.85;
+    text-align: left;
+}
+
+
+/* Password  */
+.form-row {
+    display: -ms-flexbox;
+    display: revert;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    background: #8e44ad;
+    color: #fff;
+}
+
+
+/* Recent actions */
+#content-related .module h2 {
+    background: linear-gradient(120deg , #8e44ad , #3498db );
+    padding: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 25px;
+    color: rgb(245, 245, 245);
+}
+
+/* SearchBar */
+#toolbar form #searchbar {
+    flex: 1 0 auto;
+    width: max-width;
+    height: 30px;
+    margin: 0 10px 0 6px;
+}
+
+
+
+    .h1, h1 {
+        font-size: 2rem;
+    }
+
+    /* #user-tools {
+        float: right;
+        padding: 0;
+        margin: 0 0 0 20px;
+        font-weight: 500;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        text-align: right;
+    } */
+
+    #branding h1, #branding h1 a:link, #branding h1 a:visited {
+        color: #ffffff;
+    }
+
+    #branding h1 {
+        padding: 0;
+        margin: 0 20px 0 0;
+        font-weight: 400;
+        font-size: 24px;
+        color: #ffffff;
+    }
+
+    .module table {
+        width: 130mm;
+        border-collapse: separate;
+    }
+    div.breadcrumbs {
+        
+        background-image: linear-gradient(120deg , #3498db ,#8e44ad);
+     }
+
+    /* Number ID */
+     a:link, a:visited {
+        color: #3f92eb;
+        text-decoration: none;
+    }
+
+
+    div.module caption { 
+    
+        caption-side: top !important;
+        background-image: linear-gradient(120deg,#3498db,#8e44ad);
+         }
+    .collapse { display: block !important; }
+
+    body.login{
+        background-image: linear-gradient(120deg,#3498db,#8e44ad);
+    }
+    
+    #header{
+        background-image: linear-gradient(120deg,#3498db,#8e44ad);
+    }
+    #subheader{
+        background-image:  linear-gradient(120deg,#3498db,#8e44ad);
+    }
+    /* body{
+        background-image: linear-gradient(120deg,#79aec8,#8e44ad);
+    } */
+</style>
+
+{% endblock %}
+
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+    {{ site_header|default:_('Django administration') }}
+    <!-- <img src="{% static 'background.png' %}" height="40px" /> -->
+    </a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

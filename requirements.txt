@@ -1,0 +1,25 @@
+amqp==1.4.9
+anyjson==0.3.3
+asgiref @ file:///tmp/build/80754af9/asgiref_1605055780383/work
+autopep8==1.5.4
+billiard==3.3.0.23
+celery==3.1.18
+certifi==2020.6.20
+click==7.1.2
+click-didyoumean==0.0.3
+click-plugins==1.1.1
+click-repl==0.1.6
+Django @ file:///tmp/build/80754af9/django_1601563330930/work
+django-controlcenter==0.3.0
+django-pkgconf==0.4.0
+kombu==3.0.37
+prompt-toolkit==3.0.8
+psycopg2 @ file:///C:/ci/psycopg2_1594305172475/work
+pycodestyle==2.6.0
+pytz @ file:///tmp/build/80754af9/pytz_1606604771399/work
+six==1.15.0
+sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
+toml==0.10.2
+vine==5.0.0
+wcwidth==0.2.5
+wincertstore==0.2
