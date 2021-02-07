@@ -18,12 +18,9 @@ class StatusAdmin(admin.ModelAdmin):
         return True
 
 
-
 class NetworkAdmin(admin.ModelAdmin):
     list_display = ('id', 'ip_adr')
-
     ordering = ['ip_adr']
-
     def ping_now(self, request, queryset):
         for ipObj in queryset:
             query = [ipObj.id, ipObj.ip_adr]
@@ -36,7 +33,6 @@ class NetworkAdmin(admin.ModelAdmin):
         messages.success(
             request, "Le Ping s'est bien passé, Tu peux consulter son etat sur le dashboard\
                       un mail va etre envoyer a chacun de vous au cas ou un serveur est en panne")    
-
     
     def notify_me(self, request, queryset):
         from django.core.mail import send_mail
@@ -47,12 +43,10 @@ class NetworkAdmin(admin.ModelAdmin):
             ['zhamedoun1@gmail.com'],
             fail_silently=False,
         )
-
-
     actions = [ping_now]
 
 
-
+# change the template
 from django_celery_beat.admin import PeriodicTaskAdmin
 from django_celery_beat.models import IntervalSchedule, ClockedSchedule, SolarSchedule, PeriodicTasks, PeriodicTask
 class PeriodicTaskAdmin(admin.ModelAdmin): 
@@ -60,7 +54,7 @@ class PeriodicTaskAdmin(admin.ModelAdmin):
     ordering = ['last_run_at']
     actions = ['toggle_tasks'] 
 
-# unregister GROUP Model
+# Register and unregister models
 from django.contrib import admin
 from django.contrib.auth.models import Group
 
@@ -68,13 +62,5 @@ admin.site.unregister(Group)
 admin.site.unregister(ClockedSchedule)  
 admin.site.unregister(SolarSchedule)  
 admin.site.unregister(IntervalSchedule)
-#admin.site.unregister(PeriodicTask)
-#admin.site.register(PeriodicTask, PeriodicTaskAdmin)
-# admin.site.register(PeriodicTasks, PeriodicTasksAdmin)
 admin.site.register(Status, StatusAdmin)
 admin.site.register(Network, NetworkAdmin)
-
-
-#admin.site.add_action(pingi, "Ping")
-#admin.site.add_action(make_inactive, "Make Inactive")
-# admin.site.disable_action('Ping')
