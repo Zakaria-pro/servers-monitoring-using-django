@@ -1,5 +1,5 @@
 # Description
-It's a a website where we can take a look at the state of our company's servers in real-time, I'm now working on the part frontend with ReactJS so that the page is refreshed automatically with the change of data.
+It's a a website where we can take a look at the state of our company's servers in real-time, I'm working now on the part frontend with ReactJS so that the page is refreshed automatically with the change of data.
 
 # Main feautures
 ## Login
