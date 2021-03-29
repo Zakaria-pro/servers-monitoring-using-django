@@ -12,7 +12,7 @@ It's a a website where we can take a look at the state of our company's servers 
 
 ## Manuel Ping on multiple servers
 ![Screenshot](screenshots/choose_multiple.png)
-![Screenshot](screenshots/showMstate.png)
+![Screenshot](screenshots/showMstates.png)
 
 ## Automatic Ping every 1 minute 
 ![Screenshot](screenshots/automatic_ping.png)
