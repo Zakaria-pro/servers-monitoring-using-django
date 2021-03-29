@@ -3,7 +3,7 @@ It's a a website where we can take a look at the state of our company's servers 
 
 # Main feautures
 ## Login
-![image](https://lh6.googleusercontent.com/RoIJLnFlDLs63MQ0IXE4A-KWDJCCoUKF9stt-MShpLaYTuCSHvPeBXBV5aVY5IpTetXYjIWjwRqKoz60zAs8tG_KfDzgrpaJprljKFKl=s1600)
+![Screenshot](ImagesReadME/screenshot.png)
 
 ## Manuel Ping on one server
 ![image](https://lh4.googleusercontent.com/9h_C6Jk0z7YCmHd6t4TYBxCM-n0ucoBqIrYQ2iEbF5OZd18efTlXdzm5mBWuTZ_rMAHYPgkZaQ6BCEXK2vQe4F8eAY80qsXeVYZoSa_G=s1600)
