@@ -1,9 +1,10 @@
 # Description
-It's a a website where we can take a look at the state of our CHU's servers in real-time.
+It's a a website where we can take a look at the state of CHU's servers in real-time.
 
 # Technical Stack: 
-* Python Django
-* HTML CSS
+* Django
+* Django Celery Beat for periodic asynchronous requests
+* Python HTML CSS
 
 # Main feautures
 ## Login
