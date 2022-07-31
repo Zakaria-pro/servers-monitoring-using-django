@@ -1,6 +1,10 @@
 # Description
 It's a a website where we can take a look at the state of our CHU's servers in real-time.
 
+# Technical Stack: 
+* Python Django
+* HTML CSS
+
 # Main feautures
 ## Login
 ![Screenshot](screenshots/login.png)
