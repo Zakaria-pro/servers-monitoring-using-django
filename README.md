@@ -22,10 +22,10 @@ It's a a website where we can take a look at the state of our CHU's servers in r
 ![Screenshot](screenshots/server_failed.png)
 ![Screenshot](screenshots/send_email.png)
 
-## The Dashboard 
+<!-- ## The Dashboard 
 I am working on the dashboard to look great.
 
 # I want to contribute to this projet !!
 this project needed the part front end with react JS so that the dashboard is refreshed automaticaly when data is changed.
 
-## Auto refresh of page with reactJS
+## Auto refresh of page with reactJS -->
